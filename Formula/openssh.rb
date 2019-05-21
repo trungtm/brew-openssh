@@ -12,6 +12,8 @@ class Openssh < Formula
   depends_on "pkg-config" => :build
   depends_on "ldns"
   depends_on "openssl@1.1"
+  
+  conflicts_with "homebrew/homebrew-core/openssh", :because => "this formula is based on Homebrew cores openssh"
 
   resource "com.openssh.sshd.sb" do
     url "https://opensource.apple.com/source/OpenSSH/OpenSSH-209.50.1/com.openssh.sshd.sb"
